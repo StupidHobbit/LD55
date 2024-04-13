@@ -1,7 +1,7 @@
 extends Node
 
 var elapsed = 0
-
+const BALLOON = preload("res://scenes/dialogue/balloon.tscn")
 
 # `pre_start()` is called when a scene is loaded.
 # Use this function to receive params from `Game.change_scene(params)`.
@@ -12,15 +12,13 @@ func pre_start(params):
 		for key in params:
 			var val = params[key]
 			printt("", key, val)
-	$Sprite2D.position = Game.size / 2
-
 
 # `start()` is called after pre_start and after the graphic transition ends.
 func start():
-	print("gameplay.gd: start() called")
+	var balloon: Node = BALLOON.instantiate()
+	DialogueManager.show_dialogue_balloon_scene(balloon, load('res://dialogues/main.dialogue'), 'start')
 
 
 func _process(delta):
-	elapsed += delta
-	$Sprite2D.position.x = Game.size.x / 2 + 150 * sin(2 * 0.4 * PI * elapsed)
-	$Sprite2D.position.y = Game.size.y / 2 + 100 * sin(2 * 0.2 * PI * elapsed)
+	pass
+	
