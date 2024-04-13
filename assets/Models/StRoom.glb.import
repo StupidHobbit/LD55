@@ -1,0 +1,62 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://fkw6ovtogc52"
+path="res://.godot/imported/StRoom.glb-c27e3a97d9aaeba2f6e4512ff81a8393.scn"
+
+[deps]
+
+source_file="res://assets/Models/StRoom.glb"
+dest_files=["res://.godot/imported/StRoom.glb-c27e3a97d9aaeba2f6e4512ff81a8393.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"FloorCor": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Models/FloorCor.tres"
+},
+"FloorHalls": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Models/FloorHalls.tres"
+},
+"FloorRooms": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Models/FloorRooms.tres"
+},
+"Roofs": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Models/Roofs.tres"
+},
+"Walls": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/Models/Walls.tres"
+}
+},
+"nodes": {
+"PATH:StRoom": {
+"physics/shape_type": 1
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

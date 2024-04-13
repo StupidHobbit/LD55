@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmn7bq4fmiy1j"]
+
+[ext_resource type="PackedScene" uid="uid://fkw6ovtogc52" path="res://assets/Models/StRoom.glb" id="1_t20mi"]
+
+[node name="StRoom2" instance=ExtResource("1_t20mi")]
+
+[node name="StRoom-col" parent="." index="1"]
+visible = false
