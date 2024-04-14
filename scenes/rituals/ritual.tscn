@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmp4c73elove4"]
+
+[ext_resource type="Script" path="res://scenes/rituals/ritual.gd" id="1_ppv6n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aa3a1"]
+size = Vector3(2, 1, 2)
+
+[node name="Ritual" type="Node3D"]
+script = ExtResource("1_ppv6n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_aa3a1")

@@ -1,0 +1,27 @@
+~ beholder_start
+
+if not State.has_item('beholder_spell'):
+	You: I don't know what to do with that!
+else:
+	You: Looks like this is the same pentagram from the note I just read.
+	- Try to read the spell => beholder_spell
+	- Do nothing => END 
+
+=> END
+
+~ beholder_spell
+
+You: Okay, let's try this!
+You: Zulithor nuntu yargo, annam Beholder!
+You: Bazinthor tente gravu, silva oron incanto!
+You: Porrista, zindu, krepta inferno, annam Beholder!
+You: Dorithor mondu intrako, prenza orium enthrall!
+You: Annam Beholder, mak pauzul yarza ovuntu!"
+
+if State.has_item('cats_eye') and State.has_item('mandrake'):
+	do State.start_ritual('beholder_ritual')
+else:
+	do wait(1)
+	And... Nothing happens.
+	You: Well, I guess something is missing.
+=> END

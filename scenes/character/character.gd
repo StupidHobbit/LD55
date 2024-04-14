@@ -29,6 +29,7 @@ var viewport_size: Vector2
 var movement_disabled: bool = false
 var has_crouching_boost: bool = false
 var has_dash_boost: bool = false
+var handle_input: bool = true
 var examinated_item: Examinable
 
 @onready var camera = $Camera3D
@@ -38,7 +39,19 @@ var examinated_item: Examinable
 func _ready():
 	viewport_size = get_viewport().size / 2
 
+	start_handle_input()
+	State.character = self
+	
+
+func start_handle_input():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	handle_input = true
+	movement_disabled = false
+	
+func stop_handle_input():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	handle_input = false
+	movement_disabled = true
 
 func examine(item: Examinable, collision_rid: RID):
 	item.reparent(holder)
@@ -166,6 +179,8 @@ func _process(delta: float):
 	pass
 
 func _input(event: InputEvent):
+	if not handle_input:
+		return
 	if event is InputEventMouseMotion:
 		if examinated_item != null:
 			examinated_item.rotation.x += event.relative.y * PI / viewport_size.y

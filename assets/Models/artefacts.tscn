@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://blf5sl4pffmt4"]
+
+[ext_resource type="PackedScene" uid="uid://di4sv4ry6dlys" path="res://assets/Models/Artefacts.glb" id="1_a2qgw"]
+
+[node name="Artefacts" instance=ExtResource("1_a2qgw")]
+
+[node name="Key" parent="." index="0"]
+visible = false
+
+[node name="Blade" parent="." index="1"]
+visible = false
+
+[node name="DevilsGrass" parent="." index="2"]
+visible = false
+
+[node name="CrestAmu" parent="." index="4"]
+visible = false
+
+[node name="SolarAmu" parent="." index="5"]
+visible = false
+
+[node name="KtulAmu" parent="." index="6"]
+visible = false
+
+[node name="Ectoplasm" parent="." index="7"]
+visible = false
+
+[node name="PoisonApple" parent="." index="8"]
+visible = false
+
+[node name="StarGrass" parent="." index="9"]
+visible = false
+
+[node name="Mandrake" parent="." index="10"]
+visible = false
+
+[node name="Chains" parent="." index="11"]
+visible = false
+
+[node name="Key_001" parent="." index="12"]
+visible = false

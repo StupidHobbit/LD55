@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bam1rryyiuqpb"
+path="res://.godot/imported/beholder.dialogue-f55f0c798528ca2a8a0636784d60e1c1.tres"
+
+[deps]
+
+source_file="res://dialogues/beholder.dialogue"
+dest_files=["res://.godot/imported/beholder.dialogue-f55f0c798528ca2a8a0636784d60e1c1.tres"]
+
+[params]
+
+defaults=true

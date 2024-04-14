@@ -1,7 +1,7 @@
 ~ teacher_note
 
 Note from a teacher: Good morning, Kreol.
-You: Oh, looks this is a note from my teacher.
+You: Oh, looks like this is a note from my teacher.
 Note from a teacher: I left to take care of some things.
 Note from a teacher: Keep studying until I will be back.
 Note from a teacher: And please don't try to summon anyone.
@@ -23,8 +23,35 @@ Note: It has the fascinating and gruesome form of a monstrous floating spheroid.
 Note: Its entire body is dominated by a single, massive eye, which never closes.
 Note: Despite its odd physical form, a Beholder proves to be intelligent and full of spite towards anything not like itself.
 Note: To summon the Beholder, a chilling ritual bound by dark mysteries and ancient magic, is performed.
-Note: This ritual involves a special pentagram known only to a few, [color=blue][u]cat’s-eye amulet[/u][/color] and the rare root of a [color=green][u]mandragore[/u][/color].
+Note: This ritual involves a special pentagram known only to a few, [color=blue][u]cat’s-eye amulet[/u][/color] and the rare root of a [color=green][u]mandrake[/u][/color].
 Note: Despite its malignant nature, the Beholder, when summoned within the right aspects of the pentagram, becomes temporarily shackled by the laws of the summoning.
 Note: During this brief window of control, it ensures the Beholder becomes surprisingly cooperative, answering truthfully any query put forth.
+if not State.has_item('beholder_spell'):
+	Now you know a spell for summoning a Beholder!
+	do State.add_item('beholder_spell')
+
+=> END
+
+~ hastur
+
+Note: Hastur
+
+=> END
+
+~ under_construction
+
+Note: Under construction
+
+=> END
+
+~ paimon
+
+Note: Paimon
+
+=> END
+
+~ boss
+
+Note: Boss
 
 => END

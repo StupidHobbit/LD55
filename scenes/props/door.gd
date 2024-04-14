@@ -3,6 +3,7 @@ extends Interactable
 @export var is_locked: bool = false
 @export var key_name: String = 'none'
 @export var animation_duration: float = 0.5
+@export var slots: Array[Node] = []
 
 var is_opened: bool = false
 
@@ -31,10 +32,6 @@ func on_interact(character: Character):
 		animation_duration,
 	)
 
-
 func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	for slot in slots:
+		slot.reparent($door)
