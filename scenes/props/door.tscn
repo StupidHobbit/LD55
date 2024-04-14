@@ -130,11 +130,12 @@ data = PackedVector3Array(-0.720639, 0, 0.183426, -0.720639, 1.79624, -0.183426,
 script = ExtResource("1_q3l47")
 
 [node name="portal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.275, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2qmno")
 skeleton = NodePath("")
 
 [node name="door" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6954, 0, 0.000248086)
+transform = Transform3D(1, 0, 0, 0, 1.275, 0, 0, 0, 1, 0.6954, 0, 0.000248086)
 mesh = SubResource("ArrayMesh_6xeeh")
 skeleton = NodePath("")
 
