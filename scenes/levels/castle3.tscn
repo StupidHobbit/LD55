@@ -1,7 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cemuqj35c8x5l"]
+[gd_scene load_steps=11 format=3 uid="uid://cemuqj35c8x5l"]
 
 [ext_resource type="PackedScene" uid="uid://d5360lvtbvie" path="res://scenes/character/character.tscn" id="2_qxqrf"]
 [ext_resource type="PackedScene" uid="uid://bmn7bq4fmiy1j" path="res://assets/Models/st_room_2.tscn" id="2_sguis"]
+[ext_resource type="PackedScene" uid="uid://c8t2s6gyptdqv" path="res://scenes/props/door.tscn" id="3_swf0v"]
+[ext_resource type="PackedScene" uid="uid://biy6llgxua3h8" path="res://scenes/props/table.tscn" id="4_h5220"]
+[ext_resource type="PackedScene" uid="uid://xethkh1yphi0" path="res://scenes/props/cabinet1.tscn" id="5_gk8v4"]
+[ext_resource type="PackedScene" uid="uid://b4di4vby40tih" path="res://scenes/props/cabinet2.tscn" id="6_hoyxq"]
+[ext_resource type="PackedScene" uid="uid://x3dg8pm00qcu" path="res://scenes/props/key.tscn" id="7_s3cly"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3moeo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,3 +35,130 @@ visible = false
 shadow_enabled = true
 
 [node name="StRoom2" parent="." instance=ExtResource("2_sguis")]
+
+[node name="StudentDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.3497, 0, 9.00789)
+is_locked = true
+key_name = "student_key"
+
+[node name="TeacherRoomDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9533, -1.19209e-07, 5.38636)
+is_locked = true
+key_name = "teacher_room_key"
+
+[node name="GuestDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0106, 0, 11.9928)
+
+[node name="StorageDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9914, -1.19209e-07, -1.99818)
+is_locked = true
+key_name = "storage_key"
+
+[node name="TreasureDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9793, -1.19209e-07, 20.0368)
+is_locked = true
+key_name = "treasure_key"
+
+[node name="BathroomDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.9844, 1.19209e-07, -0.0187612)
+
+[node name="OfficeDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 59.4318, 0, 9.02623)
+is_locked = true
+key_name = "office_key"
+
+[node name="WorkshopDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 58.99, -1.19209e-07, 30.0211)
+is_locked = true
+key_name = "workshop_key"
+
+[node name="KitchenDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 66.8425, -2, 60.0259)
+
+[node name="MainDemonDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.58008, -2, 60.0271)
+is_locked = true
+key_name = "main_demon_key"
+
+[node name="MessengerDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9812, -2, 54.5983)
+is_locked = true
+key_name = "messenger_key"
+
+[node name="UnkownDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9401, -2, 54.2695)
+is_locked = true
+key_name = "unknown_demon_key"
+
+[node name="InformerDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9691, -2, 65.3627)
+is_locked = true
+key_name = "informer_key"
+
+[node name="KeysDemonDoor" parent="." instance=ExtResource("3_swf0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9887, -2, 65.2444)
+is_locked = true
+key_name = "keys_demon_key"
+
+[node name="Table" parent="." instance=ExtResource("4_h5220")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5545, -2, 53.2611)
+
+[node name="Table2" parent="." instance=ExtResource("4_h5220")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.4672, -2.38419e-07, -9.72757)
+
+[node name="Cabinet1" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50.34, 0, -1.32456)
+
+[node name="Cabinet2" parent="." instance=ExtResource("6_hoyxq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 49.3426, 0, -4.55726)
+
+[node name="Cabinet3" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 56.4082, 0, -1.33429)
+
+[node name="Cabinet4" parent="." instance=ExtResource("6_hoyxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6358, 0, -3.45445)
+
+[node name="Key" parent="." instance=ExtResource("7_s3cly")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 68.7555, -1.10635, 53.7367)
+label = "Key"
+slug = "informer_key"
+
+[node name="Table3" parent="." instance=ExtResource("4_h5220")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.7643, 1.19209e-07, -4.52355)
+
+[node name="Cabinet5" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15.3729, -1.19209e-07, -1.093)
+
+[node name="Cabinet6" parent="." instance=ExtResource("6_hoyxq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15.3685, 0, -2.92846)
+
+[node name="Cabinet7" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3639, 0, -1.0337)
+
+[node name="Cabinet8" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6436, -2.38419e-07, 1.10966)
+
+[node name="Key2" parent="." instance=ExtResource("7_s3cly")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 25.3144, 0.706351, -4.07214)
+label = "Key"
+slug = "some_key"
+
+[node name="Table4" parent="." instance=ExtResource("4_h5220")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449464, 0, 1.21284)
+
+[node name="Cabinet9" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.34888, 1.19209e-07, 3.94107)
+
+[node name="Cabinet10" parent="." instance=ExtResource("6_hoyxq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.287874, 0.0148976, 5.40538)
+
+[node name="Cabinet11" parent="." instance=ExtResource("5_gk8v4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.61516, 2.38419e-07, 4.83792)
+
+[node name="Cabinet12" parent="." instance=ExtResource("6_hoyxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62727, 2.38419e-07, 6.69947)
+
+[node name="Key3" parent="." instance=ExtResource("7_s3cly")]
+transform = Transform3D(0.0482397, 0.998836, 0, -0.998836, 0.0482397, 0, 0, 0, 1, 0.827089, 0.835096, 1.3903)
+label = "Key"
+slug = "student_key"

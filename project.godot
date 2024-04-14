@@ -24,9 +24,9 @@ DebugShortcuts="*res://addons/ggt-debug-shortcuts/autoload/debug_shortcuts.tscn"
 Game="*res://addons/ggt-core/game.gd"
 Transitions="*res://addons/ggt-core/transitions/transitions.tscn"
 Scenes="*res://addons/ggt-core/scenes/scenes.gd"
-Utils="*res://addons/ggt-core/utils/utils.gd"
+Utils="*res://autoloads/utils.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
+State="*res://autoloads/state.gd"
 
 [category]
 
@@ -43,7 +43,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg")
 
 [gui]
 
@@ -123,4 +123,4 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/main.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/main.dialogue", "res://dialogues/closed.dialogue")
