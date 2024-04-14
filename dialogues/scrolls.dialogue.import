@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://6cekwbjg0cbe"
+path="res://.godot/imported/scrolls.dialogue-5ae6823c66d1ebe297541db369283828.tres"
+
+[deps]
+
+source_file="res://dialogues/scrolls.dialogue"
+dest_files=["res://.godot/imported/scrolls.dialogue-5ae6823c66d1ebe297541db369283828.tres"]
+
+[params]
+
+defaults=true

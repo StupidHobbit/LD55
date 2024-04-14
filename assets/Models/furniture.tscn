@@ -3,3 +3,162 @@
 [ext_resource type="PackedScene" uid="uid://1lihg7mvd3wb" path="res://assets/Models/Furniture.glb" id="1_4c6ta"]
 
 [node name="Furniture" instance=ExtResource("1_4c6ta")]
+
+[node name="Cabinet1" parent="." index="0"]
+visible = false
+
+[node name="Cabinet2" parent="." index="1"]
+visible = false
+
+[node name="Table" parent="." index="2"]
+visible = false
+
+[node name="BookKeeper" parent="." index="3"]
+visible = false
+
+[node name="Cauldrons" parent="." index="4"]
+visible = false
+
+[node name="Book_open" parent="." index="5"]
+visible = false
+
+[node name="Book_big" parent="." index="6"]
+visible = false
+
+[node name="Book_2" parent="." index="7"]
+visible = false
+
+[node name="Book_1" parent="." index="8"]
+visible = false
+
+[node name="FlaskTable" parent="." index="12"]
+visible = false
+
+[node name="Flask_big" parent="." index="13"]
+visible = false
+
+[node name="Flask_cylinder_2" parent="." index="14"]
+visible = false
+
+[node name="Flask_tri" parent="." index="15"]
+visible = false
+
+[node name="Flask_cube" parent="." index="16"]
+visible = false
+
+[node name="Flask_torus" parent="." index="17"]
+visible = false
+
+[node name="Tubes" parent="." index="18"]
+visible = false
+
+[node name="Cauldron" parent="." index="19"]
+visible = false
+
+[node name="BaseBig" parent="." index="20"]
+visible = false
+
+[node name="Mortar" parent="." index="21"]
+visible = false
+
+[node name="Pestil" parent="." index="22"]
+visible = false
+
+[node name="Crystalball" parent="." index="23"]
+visible = false
+
+[node name="Cards" parent="." index="25"]
+visible = false
+
+[node name="Bag_2" parent="." index="48"]
+visible = false
+
+[node name="Book_4" parent="." index="50"]
+visible = false
+
+[node name="Book_6" parent="." index="51"]
+visible = false
+
+[node name="Book_5" parent="." index="52"]
+visible = false
+
+[node name="Book_7" parent="." index="53"]
+visible = false
+
+[node name="Book_3" parent="." index="54"]
+visible = false
+
+[node name="Book_9" parent="." index="55"]
+visible = false
+
+[node name="Book_8" parent="." index="56"]
+visible = false
+
+[node name="Scroll_9" parent="." index="57"]
+visible = false
+
+[node name="Stick" parent="." index="64"]
+visible = false
+
+[node name="Teapot" parent="." index="65"]
+visible = false
+
+[node name="WitchHat" parent="." index="66"]
+visible = false
+
+[node name="Chest" parent="." index="68"]
+visible = false
+
+[node name="Napkin" parent="." index="69"]
+visible = false
+
+[node name="Dagger_2" parent="." index="70"]
+visible = false
+
+[node name="Dagger" parent="." index="71"]
+visible = false
+
+[node name="Window" parent="." index="72"]
+visible = false
+
+[node name="Cauldrons_fireplace" parent="." index="73"]
+visible = false
+
+[node name="Wood_log" parent="." index="74"]
+visible = false
+
+[node name="StandFireplace" parent="." index="75"]
+visible = false
+
+[node name="Lamp" parent="." index="76"]
+visible = false
+
+[node name="Flask_round_1" parent="." index="77"]
+visible = false
+
+[node name="Flask_cylinder" parent="." index="78"]
+visible = false
+
+[node name="Round_carpet" parent="." index="79"]
+visible = false
+
+[node name="Cauldrons3" parent="." index="80"]
+visible = false
+
+[node name="Cauldrons2" parent="." index="81"]
+visible = false
+
+[node name="CatEye" parent="." index="82"]
+visible = false
+
+[node name="Fireplace_wall" parent="." index="83"]
+visible = false
+
+[node name="Door" parent="." index="84"]
+visible = false
+
+[node name="Door-col" parent="." index="85"]
+visible = false
+
+[node name="Door_portal" parent="." index="86"]
+visible = false

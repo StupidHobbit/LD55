@@ -141,6 +141,7 @@ skeleton = NodePath("")
 
 [node name="door" type="StaticBody3D" parent="door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6954, 0, -0.000248086)
+collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
 shape = SubResource("ConcavePolygonShape3D_byig3")

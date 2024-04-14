@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cemuqj35c8x5l"]
+[gd_scene load_steps=18 format=3 uid="uid://cemuqj35c8x5l"]
 
 [ext_resource type="PackedScene" uid="uid://d5360lvtbvie" path="res://scenes/character/character.tscn" id="2_qxqrf"]
 [ext_resource type="PackedScene" uid="uid://bmn7bq4fmiy1j" path="res://assets/Models/st_room_2.tscn" id="2_sguis"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://xethkh1yphi0" path="res://scenes/props/cabinet1.tscn" id="5_gk8v4"]
 [ext_resource type="PackedScene" uid="uid://b4di4vby40tih" path="res://scenes/props/cabinet2.tscn" id="6_hoyxq"]
 [ext_resource type="PackedScene" uid="uid://x3dg8pm00qcu" path="res://scenes/props/key.tscn" id="7_s3cly"]
+[ext_resource type="PackedScene" uid="uid://cep21k8x6efvs" path="res://scenes/props/scrolls/opened_scroll.tscn" id="8_wuypq"]
+[ext_resource type="Resource" uid="uid://6cekwbjg0cbe" path="res://dialogues/scrolls.dialogue" id="9_awln1"]
+[ext_resource type="Texture2D" uid="uid://ce0n6hacsbpdd" path="res://icons/pentagram-rose.svg" id="10_qsoae"]
+[ext_resource type="PackedScene" uid="uid://dmwsocuecsnq8" path="res://scenes/props/scrolls/green_scroll.tscn" id="11_txrk7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3moeo"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,10 +25,28 @@ sky = SubResource("Sky_dkd0g")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Gradient" id="Gradient_43gjw"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 0.054902, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0mmsc"]
+noise_type = 2
+frequency = 0.008
+fractal_octaves = 1
+cellular_distance_function = 1
+cellular_return_type = 6
+domain_warp_enabled = true
+domain_warp_fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1ji6o"]
+width = 1024
+height = 1024
+color_ramp = SubResource("Gradient_43gjw")
+noise = SubResource("FastNoiseLite_0mmsc")
+
 [node name="Castle" type="Node3D"]
 
 [node name="Character" parent="." instance=ExtResource("2_qxqrf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06986, 1.1182, 1.18205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8465, -1.13692, 62.2632)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yxs8o")
@@ -45,6 +67,12 @@ key_name = "student_key"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9533, -1.19209e-07, 5.38636)
 is_locked = true
 key_name = "teacher_room_key"
+
+[node name="OpenedScroll" parent="TeacherRoomDoor" instance=ExtResource("8_wuypq")]
+transform = Transform3D(1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, -0.0185366, 1.3884, 0.183426)
+dialogue = ExtResource("9_awln1")
+dialogue_title = "teacher_note"
+prefix = "Read"
 
 [node name="GuestDoor" parent="." instance=ExtResource("3_swf0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0106, 0, 11.9928)
@@ -91,9 +119,15 @@ is_locked = true
 key_name = "unknown_demon_key"
 
 [node name="InformerDoor" parent="." instance=ExtResource("3_swf0v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9691, -2, 65.3627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9691, -2, 66.9037)
 is_locked = true
 key_name = "informer_key"
+
+[node name="OpenedScroll2" parent="InformerDoor" instance=ExtResource("8_wuypq")]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0.0219727, 1.16576, -0.0772705)
+dialogue = ExtResource("9_awln1")
+dialogue_title = "beholder"
+prefix = "Read"
 
 [node name="KeysDemonDoor" parent="." instance=ExtResource("3_swf0v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9887, -2, 65.2444)
@@ -120,7 +154,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6358, 0, -3.45445)
 
 [node name="Key" parent="." instance=ExtResource("7_s3cly")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 68.7511, -1.08209, 53.7259)
-label = "Key"
+label = "Beholder's door key"
 slug = "informer_key"
 
 [node name="Table3" parent="." instance=ExtResource("4_h5220")]
@@ -162,3 +196,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62727, 2.38419e-07, 6.69947
 transform = Transform3D(0.0482397, 0.998836, 0, -0.998836, 0.0482397, 0, 0, 0, 1, 0.827089, 0.835096, 1.3903)
 label = "Key"
 slug = "student_key"
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9724, -2.0297, 72.4658)
+size = Vector3(8, 0.1, 11)
+texture_albedo = SubResource("NoiseTexture2D_1ji6o")
+
+[node name="Decal" type="Decal" parent="Decal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.0696)
+size = Vector3(3, 1, 3)
+texture_albedo = ExtResource("10_qsoae")
+
+[node name="Table5" parent="." instance=ExtResource("4_h5220")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4527, -2, 68.6376)
+
+[node name="green_scroll" parent="." instance=ExtResource("11_txrk7")]
+transform = Transform3D(0.0414921, 0, 0.999139, 0, 1, 0, -0.999139, 0, 0.0414921, 26.8043, -1.27862, 68.7144)
+dialogue = ExtResource("9_awln1")
+dialogue_title = "beholder_description"
+prefix = "Read "
