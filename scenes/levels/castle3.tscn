@@ -150,7 +150,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.449464, 0, 1.21284)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.34888, 1.19209e-07, 3.94107)
 
 [node name="Cabinet10" parent="." instance=ExtResource("6_hoyxq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.287874, 0.0148976, 5.40538)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.319036, 0.0148976, 5.40538)
 
 [node name="Cabinet11" parent="." instance=ExtResource("5_gk8v4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.61516, 2.38419e-07, 4.83792)
