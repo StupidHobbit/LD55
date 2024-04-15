@@ -25,3 +25,29 @@ else:
 	And... Nothing happens.
 	You: Well, I guess something is missing.
 => END
+
+~ hastur_start
+
+if not State.has_item('hastur_spell'):
+	You: I don't know what to do with that!
+else:
+	You: Looks like this is the same pentagram from the note I just read.
+	- Try to read the spell => hastur_spell
+	- Do nothing => END 
+
+=> END
+
+~ hastur_spell
+
+You: Okay, let's try this!
+You: Coniuro te, spiritus tenebris, adveni nefarium!
+You: Ph'nglui mglw'nafh Yog-Sothoth, Shub-Niggurath!
+
+if State.has_item('blade') and State.has_item('solar_amulet') and State.has_item('ktulhu_amulet'):
+	do State.start_ritual('hastur_ritual')
+else:
+	do wait(1)
+	And... Nothing happens.
+	You: Well, I guess something is missing.
+	
+=> END

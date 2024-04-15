@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://nepeywnd15b8"
+path="res://.godot/imported/hastur_dialogue.dialogue-a9ad1bc575cf72fa7fb97ed9f5ea2ce1.tres"
+
+[deps]
+
+source_file="res://dialogues/hastur_dialogue.dialogue"
+dest_files=["res://.godot/imported/hastur_dialogue.dialogue-a9ad1bc575cf72fa7fb97ed9f5ea2ce1.tres"]
+
+[params]
+
+defaults=true
