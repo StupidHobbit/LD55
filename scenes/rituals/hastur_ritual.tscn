@@ -9,5 +9,5 @@ slug = "hastur_ritual"
 demon_scene = ExtResource("2_8na4k")
 title = "Try to summon"
 dialogue = ExtResource("3_186lt")
-dialogue_title = "beholder_start"
+dialogue_title = "hastur_start"
 prefix = ""
