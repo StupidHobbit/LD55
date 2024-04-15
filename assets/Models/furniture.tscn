@@ -58,6 +58,9 @@ visible = false
 [node name="BaseBig" parent="." index="20"]
 visible = false
 
+[node name="Mortar" parent="." index="21"]
+visible = false
+
 [node name="Pestil" parent="." index="22"]
 visible = false
 
@@ -65,6 +68,9 @@ visible = false
 visible = false
 
 [node name="Cards" parent="." index="25"]
+visible = false
+
+[node name="CandlesTable" parent="." index="26"]
 visible = false
 
 [node name="Bag_2" parent="." index="48"]
