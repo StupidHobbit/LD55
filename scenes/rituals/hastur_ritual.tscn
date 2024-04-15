@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0isrnxoqy3ff"]
 
 [ext_resource type="PackedScene" uid="uid://dmp4c73elove4" path="res://scenes/rituals/ritual.tscn" id="1_itgsv"]
-[ext_resource type="PackedScene" uid="uid://c88uehbh0mse3" path="res://scenes/creatures/beholder.tscn" id="2_lus7y"]
+[ext_resource type="PackedScene" path="res://scenes/creatures/hastur.tscn" id="2_8na4k"]
 [ext_resource type="Resource" uid="uid://owwdd8if52mv" path="res://dialogues/rituals.dialogue" id="3_186lt"]
 
-[node name="BeholderRitual" instance=ExtResource("1_itgsv")]
-slug = "beholder_ritual"
-demon_scene = ExtResource("2_lus7y")
+[node name="HasturRitual" instance=ExtResource("1_itgsv")]
+slug = "hastur_ritual"
+demon_scene = ExtResource("2_8na4k")
 title = "Try to summon"
 dialogue = ExtResource("3_186lt")
 dialogue_title = "beholder_start"
