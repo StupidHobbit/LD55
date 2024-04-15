@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c88uehbh0mse3"]
+[gd_scene load_steps=7 format=3 uid="uid://c88uehbh0mse3"]
 
 [ext_resource type="PackedScene" uid="uid://cf45ndpg1nysr" path="res://assets/creatures/Eye.glb" id="1_2ptdc"]
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_b2hac"]
 [ext_resource type="Resource" uid="uid://bam1rryyiuqpb" path="res://dialogues/beholder.dialogue" id="2_xjy8e"]
+[ext_resource type="Script" path="res://scenes/creatures/Eye.gd" id="4_1sbl6"]
+[ext_resource type="PackedScene" uid="uid://1bltkd4gyyjo" path="res://scenes/vfx/eyes.tscn" id="5_xs0ad"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_v4u8h"]
-radius = 0.705
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vorr1"]
+radius = 0.7
 
 [node name="Beholder" type="Node3D"]
 script = ExtResource("1_b2hac")
@@ -15,6 +17,7 @@ dialogue_title = "start"
 
 [node name="Eye" parent="." instance=ExtResource("1_2ptdc")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, 0)
+script = ExtResource("4_1sbl6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -22,4 +25,7 @@ collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CylinderShape3D_v4u8h")
+shape = SubResource("CapsuleShape3D_vorr1")
+
+[node name="ForceField" parent="." instance=ExtResource("5_xs0ad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0178015, 1.49, -0.204581)

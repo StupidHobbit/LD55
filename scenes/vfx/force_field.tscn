@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk0l2yv80jlmg"]
+
+[sub_resource type="Gradient" id="Gradient_ywyk1"]
+interpolation_mode = 2
+colors = PackedColorArray(0.733333, 0.00784314, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2u7p"]
+gradient = SubResource("Gradient_ywyk1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls6ob"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 2, 3, 0.7)
+albedo_texture = SubResource("GradientTexture2D_w2u7p")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+proximity_fade_distance = 2.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_637xh"]
+material = SubResource("StandardMaterial3D_ls6ob")
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="Gradient" id="Gradient_l6bb1"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.289474, 0.542105, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0.694118, 0.00784314, 0.207843, 0.92549, 0.772549, 0.137255, 0.0901961, 0.564706, 1, 1, 1, 0)
+
+[node name="ForceField" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0383377, 1, 0.062129)
+amount = 750
+lifetime = 5.0
+preprocess = 5.0
+mesh = SubResource("QuadMesh_637xh")
+emission_shape = 3
+emission_box_extents = Vector3(1, 2, 1)
+gravity = Vector3(0, 1, 0)
+tangential_accel_min = -0.04
+tangential_accel_max = 0.04
+scale_amount_min = 0.1
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_l6bb1")

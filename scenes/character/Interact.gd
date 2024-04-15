@@ -31,7 +31,7 @@ func _process(delta):
 		return
 	var interactable = get_interactable()
 	
-	if interactable == null:
+	if interactable == null or not interactable.enabled:
 		$Control/Label.hide()
 		return
 	var label = interactable.get_label()

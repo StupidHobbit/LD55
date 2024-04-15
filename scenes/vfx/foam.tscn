@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://w33mmlp2mwx8"]
+
+[sub_resource type="Gradient" id="Gradient_p16xn"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.0963855, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.917647, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bewgf"]
+gradient = SubResource("Gradient_p16xn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xoqwk"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 0.0
+emission_ring_radius = 1.6
+emission_ring_inner_radius = 0.0
+gravity = Vector3(0, 1, 0)
+color = Color(1, 1, 1, 0.25098)
+color_ramp = SubResource("GradientTexture1D_bewgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mtil"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+proximity_fade_enabled = true
+proximity_fade_distance = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_5q273"]
+material = SubResource("StandardMaterial3D_8mtil")
+radius = 0.4
+height = 0.4
+radial_segments = 16
+rings = 16
+
+[node name="Foam" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 200
+fixed_fps = 0
+interpolate = false
+process_material = SubResource("ParticleProcessMaterial_xoqwk")
+draw_pass_1 = SubResource("SphereMesh_5q273")

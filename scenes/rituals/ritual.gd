@@ -7,6 +7,7 @@ class_name Ritual
 
 func start():
 	var demon = demon_scene.instantiate()
+	self.enabled = false
 	add_child(demon)
 	impl(demon)
 	
