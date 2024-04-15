@@ -18,7 +18,7 @@ func start():
 	
 func finish():
 	impl_finish(demon)
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	
 	if spawn_item != null:
 		var item: Node3D = spawn_item.instantiate()

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch0bbnyqg28a6"]
+[gd_scene load_steps=7 format=3 uid="uid://ch0bbnyqg28a6"]
 
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_127uh"]
+[ext_resource type="Script" path="res://scenes/creatures/Ossaf.gd" id="1_x4oel"]
 [ext_resource type="Resource" uid="uid://dowuwcq3f4322" path="res://dialogues/Ossadagowah.dialogue" id="2_2egyt"]
 [ext_resource type="PackedScene" uid="uid://bmm47y1dtasv6" path="res://assets/creatures/Asshead.glb" id="3_6kr36"]
+[ext_resource type="PackedScene" uid="uid://w33mmlp2mwx8" path="res://scenes/vfx/foam.tscn" id="4_nyeoy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vorr1"]
 radius = 0.952813
@@ -23,3 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01161, 0)
 shape = SubResource("CapsuleShape3D_vorr1")
 
 [node name="Asshead2" parent="." instance=ExtResource("3_6kr36")]
+script = ExtResource("1_x4oel")
+
+[node name="Foam" parent="." instance=ExtResource("4_nyeoy")]

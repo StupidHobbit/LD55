@@ -59,7 +59,7 @@ size = Vector3(0.221, 0.235, 0.775)
 [node name="Blade" type="Node3D"]
 script = ExtResource("1_ntd4a")
 label = "Blade"
-slug = "blade "
+slug = "blade"
 
 [node name="Blade" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_uryt8")
