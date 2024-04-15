@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bafbc0uvspwwo"]
+[gd_scene load_steps=11 format=3 uid="uid://bafbc0uvspwwo"]
 
 [ext_resource type="Texture2D" uid="uid://ynmlru7g15qr" path="res://assets/Models/Artefacts_Demons_SP_Art_BaseColor.png" id="1_38pv0"]
 [ext_resource type="Script" path="res://scenes/props/key.gd" id="1_e0oxg"]
 [ext_resource type="Texture2D" uid="uid://c0u8eu8n6monn" path="res://assets/Models/Artefacts_Demons_SP_Art_Emissive.png" id="2_3tkrf"]
+[ext_resource type="AudioStream" uid="uid://b2x4nc0uctsba" path="res://assets/sounds/Mandrake.wav" id="2_pqgqh"]
 [ext_resource type="Texture2D" uid="uid://dfvyuysl6lcne" path="res://assets/Models/Artefacts_Demons_SP_Art_OcclusionRoughnessMetallic.png" id="3_0ydsq"]
 [ext_resource type="Texture2D" uid="uid://dw4vly8iv28is" path="res://assets/Models/Artefacts_Demons_SP_Art_Normal.png" id="4_k7xr1"]
 
@@ -58,6 +59,7 @@ size = Vector3(0.445, 0.32, 0.88)
 
 [node name="Mandrake" type="Node3D"]
 script = ExtResource("1_e0oxg")
+audio = ExtResource("2_pqgqh")
 
 [node name="Mandrake" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.000872656, 1, 0, -1, -0.000872656, 0, 0.109392, -0.159189)

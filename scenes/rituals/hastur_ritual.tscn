@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0isrnxoqy3ff"]
 
 [ext_resource type="PackedScene" uid="uid://dmp4c73elove4" path="res://scenes/rituals/ritual.tscn" id="1_itgsv"]
-[ext_resource type="PackedScene" path="res://scenes/creatures/hastur.tscn" id="2_8na4k"]
+[ext_resource type="PackedScene" uid="uid://brhahsyr7w2c0" path="res://scenes/creatures/hastur.tscn" id="2_8na4k"]
 [ext_resource type="Resource" uid="uid://owwdd8if52mv" path="res://dialogues/rituals.dialogue" id="3_186lt"]
 
 [node name="HasturRitual" instance=ExtResource("1_itgsv")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8t2s6gyptdqv"]
+[gd_scene load_steps=18 format=3 uid="uid://c8t2s6gyptdqv"]
 
 [ext_resource type="Texture2D" uid="uid://v5cwm2308fvq" path="res://assets/Models/Furniture_Wood_025_basecolor.jpg" id="1_3iq8o"]
 [ext_resource type="Script" path="res://scenes/props/door.gd" id="1_q3l47"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://by6wbg63io8tw" path="res://assets/Models/Furniture_Stylized_Rocks_002_basecolor.jpg" id="3_771g0"]
 [ext_resource type="Texture2D" uid="uid://fu13m0aj0skk" path="res://assets/Models/Furniture_Stylized_Rocks_002_roughness.png" id="4_n0hfs"]
 [ext_resource type="Texture2D" uid="uid://ci2g00m1w83io" path="res://assets/Models/Furniture_Stylized_Rocks_002_normal.jpg" id="5_qy2jm"]
+[ext_resource type="AudioStream" uid="uid://dwhvs86dj6ctu" path="res://assets/sounds/Door_open.wav" id="7_vemnv"]
+[ext_resource type="AudioStream" uid="uid://c4cl6e1ql4hnv" path="res://assets/sounds/Door_closed.wav" id="8_n4pk5"]
+[ext_resource type="AudioStream" uid="uid://dswjn5jiyi6bl" path="res://assets/sounds/KeyUse.wav" id="9_n7qd2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lq0pt"]
 resource_name = "Window"
@@ -145,3 +148,15 @@ collision_layer = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
 shape = SubResource("ConcavePolygonShape3D_byig3")
+
+[node name="OpenAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_vemnv")
+bus = &"SFX"
+
+[node name="CloseAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_n4pk5")
+bus = &"SFX"
+
+[node name="UnlockStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_n7qd2")
+bus = &"SFX"
