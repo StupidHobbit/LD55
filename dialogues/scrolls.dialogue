@@ -44,9 +44,11 @@ Note: Hastur is one of the ancient ones, a mythical creature that brings death t
 Note: Little is known about him, but his bright, unblinking eyes, visible from the darkness of his hood and the seemingly weightless body hidden behind his cloak, to doubt who it is when you see him.
 Note: In order to summon him, you need a [color=blue][u]star grass[/u][/color], a [color=green][u]Hastur's amulet[/u][/color] while wearing a [color=YELLOW][u]solar amulet[/u][/color] which surrounds the wearer with an aura of sunshine and grants him protection from the all-devouring darkness emanating from Hastur.
 if not State.has_item('hastur_spell'):
-	Now you know a spell for summoning a Beholder!
+	Now you know a spell for summoning a Hastur!
 	do State.add_item('hastur_spell')
 	
+=> END
+
 ~ under_construction
 
 Note: Under construction
@@ -58,6 +60,19 @@ Note: Under construction
 Note: Paimon
 
 => END
+
+~ paimon_description
+
+Note: The One whose name inspires fear in the hearts of demons, Paimon. 
+Note: He is known as one of Lucifer's most loyal followers, a demon with immense power and ruthlessness.
+Note: His knowledge transcends human understanding, making him a prized target in demonological studies.
+Note: Summoning Paimon is no easy task, as it requires the use of specialized items. Such as [color=blue][u]blood[/u][/color] of others demons, to lure him in and a [color=green][u]holly cross[/u][/color], to to provoke him.
+Note: Those who choose to summon him face an unenviable fate, as they will be bound to his service.
+Note: The only way to avoid this is to have a special [color=YELLOW][u]chain[/u][/color] forged specifically for such a demon.
+if not State.has_item('paimon_spell'):
+	Now you know a spell for summoning a Ossadagowah!
+	do State.add_item('paimon_spell')
+~ END
 
 ~ ossadagowah
 
@@ -75,5 +90,7 @@ Note: It is not known whether Ossadagowah is intelligent, but if so, it has neve
 Note: Ossadagowah are prized for their blood, which is used by demonologists all over the world to make elixirs, and more importantly, this blood is part of several important rituals.  
 Note: Their summoning is one of the first rituals young demonologists learn. It requires a [color=blue][u]devil's leaf[/u][/color] and a [color=green][u]tainted apple.[/u][/color]
 if not State.has_item('ossadagowah_spell'):
-	Now you know a spell for summoning a Beholder!
+	Now you know a spell for summoning a Ossadagowah!
 	do State.add_item('ossadagowah_spell')
+	
+=> END

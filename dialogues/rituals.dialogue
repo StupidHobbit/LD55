@@ -66,8 +66,11 @@ else:
 ~ ossadagowah_spell
 
 You: Okay, let's try this!
-You: Ossadagowah, veni ad me nunc!
-You: In nomine tenebrarum, exsurgat aeternum!
+You: Ph'nglui mglw'nafh Ossadagowah
+You: R'lyeh wgah'nagl fhtagn
+You: Ia! Ia! Ossadagowah! Shub-Niggurath
+You: Ia! Ia! Ossadagowah! Yog-Sothoth
+You: Ia! Ia! Ossadagowah! Azathoth
 
 if State.has_item('devils_grass') and State.has_item('poison_apple'):
 	do State.start_ritual('ossadagowah_ritual')
@@ -75,3 +78,31 @@ else:
 	do wait(1)
 	And... Nothing happens.
 	You: Well, I guess something is missing.
+
+=> END
+
+~ paimon_start
+
+if not State.has_item('paimon_spell'):
+	You: I don't know what to do with that!
+else:
+	You: Looks like this is the same pentagram from the note I just read.
+	- Try to read the spell => paimon_spell
+	- Do nothing => END 
+	
+	=> END
+	
+~ paimon_spell
+
+You: Okay, let's try this!
+You: Paimon, veni ad me nunc! 
+You: In nomine tenebrarum, exsurgat aeternum!
+	
+if State.has_item('blood') and State.has_item('chains') and State.has_item('crest_amulet'):
+	do State.start_ritual('paimon_ritual')
+else:
+	do wait(1)
+	And... Nothing happens.
+	You: Well, I guess something is missing.
+
+=> END

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://kuts3plna6bh"]
+
+[ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_r1utn"]
+[ext_resource type="Resource" uid="uid://dpw43iuf0u6bc" path="res://dialogues/Paimon.dialogue" id="2_i0tr4"]
+[ext_resource type="PackedScene" uid="uid://c41ib1pqvtjcc" path="res://assets/creatures/Mess.glb" id="3_8c53r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vorr1"]
+radius = 0.527413
+height = 1.74866
+
+[node name="Paimon" type="Node3D"]
+script = ExtResource("1_r1utn")
+title = "Paimon"
+dialogue = ExtResource("2_i0tr4")
+dialogue_title = "start"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+collision_layer = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.873477, 0)
+shape = SubResource("CapsuleShape3D_vorr1")
+
+[node name="Mess" parent="." instance=ExtResource("3_8c53r")]
