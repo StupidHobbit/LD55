@@ -19,4 +19,6 @@ else:
 => END
 ~ stab_ossadagowah
 You stab the poor creature, and the [color=DARK_RED][u]demon blood[/u][/color] pours out of him.
+do State.finish_ritual('ossadagowah_ritual')
+
 => END

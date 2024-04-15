@@ -16,3 +16,6 @@ func add_ritual(name: String, ritual):
 
 func start_ritual(name: String):
 	rituals[name].start()
+
+func finish_ritual(name: String):
+	rituals[name].finish()

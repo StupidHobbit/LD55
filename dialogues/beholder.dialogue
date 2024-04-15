@@ -18,5 +18,6 @@ You: wait, I don't even have access to a lot of rooms, the teacher locks everyth
 Beholder: Here, use these keys, find the right compound, pave yourself a way to your goal.
 You: Wait ...
 The demon disappears and a bunch of keys appear in its place.
+do State.finish_ritual('beholder_ritual')
 
 => END

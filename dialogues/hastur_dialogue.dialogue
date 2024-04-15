@@ -23,4 +23,5 @@ You: Tell me demon, how can I save my teacher?
 Hastur: Well, first, you need to get blood of the Ossadagowah, summon him and cut his flesh, here, take this knife, it's made to pierce his dense scales. 
 You: Ok, I'll do that. Now be gone demon. Get back to the hole, you come from. 
 The demon disappears, and in the center of the pentogram you see a blade lying in the center of it.
+do State.finish_ritual('hastur_ritual')
 => END

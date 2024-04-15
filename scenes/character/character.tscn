@@ -88,7 +88,6 @@ layout_mode = 0
 offset_top = 20.0
 offset_right = 40.0
 offset_bottom = 43.0
-text = "Interact"
 
 [node name="Holder" type="SpringArm3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -0.998754, -0.0499131, 0, 0.0499131, -0.998754, -0.0213728, -0.00767004, -0.0725299)

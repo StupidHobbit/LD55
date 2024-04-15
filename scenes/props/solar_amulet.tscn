@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dw4vly8iv28is" path="res://assets/Models/Artefacts_Demons_SP_Art_Normal.png" id="5_o6v5b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_506b5"]
-size = Vector3(0.401489, 0.428101, 0.121826)
+size = Vector3(0.496, 0.518, 0.487)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0nnn"]
 resource_name = "Art"
@@ -37,7 +37,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s25t7"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_6l88y"]
 resource_name = "Artefacts_Плоскость_001"
 _surfaces = [{
 "aabb": AABB(-0.113587, -0.015899, -0.213278, 0.301174, 0.0290021, 0.336857),
@@ -66,10 +66,9 @@ transform = Transform3D(1, 0, 0, 0, -0.0160564, 0.999871, 0, -0.999871, -0.01605
 collision_layer = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0297313, 0.029429, -0.0221171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, 0.029, -0.022)
 shape = SubResource("BoxShape3D_506b5")
 
 [node name="SolarAmu" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("ArrayMesh_s25t7")
+mesh = SubResource("ArrayMesh_6l88y")
 skeleton = NodePath("")
