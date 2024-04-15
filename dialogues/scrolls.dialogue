@@ -42,7 +42,7 @@ Note: Hastur
 
 Note: Hastur is one of the ancient ones, a mythical creature that brings death to some and madness to others.
 Note: Little is known about him, but his bright, unblinking eyes, visible from the darkness of his hood and the seemingly weightless body hidden behind his cloak, to doubt who it is when you see him.
-Note: In order to summon him, you need a [color=blue][u]knife[/u][/color], to donate your blood to his sign, a [color=green][u]Hastur's amulet[/u][/color] while wearing a [color=YELLOW][u]solar amulet[/u][/color] which surrounds the wearer with an aura of sunshine and grants him protection from the all-devouring darkness emanating from Hastur.
+Note: In order to summon him, you need a [color=blue][u]star grass[/u][/color], a [color=green][u]Hastur's amulet[/u][/color] while wearing a [color=YELLOW][u]solar amulet[/u][/color] which surrounds the wearer with an aura of sunshine and grants him protection from the all-devouring darkness emanating from Hastur.
 if not State.has_item('hastur_spell'):
 	Now you know a spell for summoning a Beholder!
 	do State.add_item('hastur_spell')
@@ -59,8 +59,21 @@ Note: Paimon
 
 => END
 
-~ boss
+~ ossadagowah
 
-Note: Boss
+Note: Ossadagowah
 
 => END
+
+~ ossadagowah_description
+
+Note: Ossadagowah it's a strange creature.
+Note: Coming from the ancient world, it has unforgettable features. 
+Note: Disproportionately long limbs ending in long claws emerge from a short body covered with dense scales.
+Note: It is adorned with a strange head, which looks like a glass dome, shimmering with amazing colors.
+Note: It is not known whether Ossadagowah is intelligent, but if so, it has never shown any signs. 
+Note: Ossadagowah are prized for their blood, which is used by demonologists all over the world to make elixirs, and more importantly, this blood is part of several important rituals.  
+Note: Their summoning is one of the first rituals young demonologists learn. It requires a [color=blue][u]devil's leaf[/u][/color] and a [color=green][u]tainted apple.[/u][/color]
+if not State.has_item('ossadagowah_spell'):
+	Now you know a spell for summoning a Beholder!
+	do State.add_item('ossadagowah_spell')

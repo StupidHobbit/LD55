@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr6nknoo70rtg"]
+
+[ext_resource type="PackedScene" uid="uid://dmp4c73elove4" path="res://scenes/rituals/ritual.tscn" id="1_nexfq"]
+[ext_resource type="PackedScene" uid="uid://ch0bbnyqg28a6" path="res://scenes/creatures/ossadagowah.tscn" id="2_n2wlf"]
+[ext_resource type="Resource" uid="uid://owwdd8if52mv" path="res://dialogues/rituals.dialogue" id="3_qb858"]
+
+[node name="OssadagowahRitual" instance=ExtResource("1_nexfq")]
+slug = "ossadagowah_ritual"
+demon_scene = ExtResource("2_n2wlf")
+title = "Try to summon"
+dialogue = ExtResource("3_qb858")
+dialogue_title = "hastur_start"
+prefix = ""

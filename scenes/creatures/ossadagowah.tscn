@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch0bbnyqg28a6"]
+
+[ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_127uh"]
+[ext_resource type="Resource" uid="uid://dowuwcq3f4322" path="res://dialogues/Ossadagowah.dialogue" id="2_2egyt"]
+[ext_resource type="PackedScene" uid="uid://bmm47y1dtasv6" path="res://assets/creatures/Asshead.glb" id="3_6kr36"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vorr1"]
+radius = 0.952813
+height = 2.44301
+
+[node name="Ossadagowah" type="Node3D"]
+script = ExtResource("1_127uh")
+title = "Ossadagowah"
+dialogue = ExtResource("2_2egyt")
+dialogue_title = "start"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+collision_layer = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01161, 0)
+shape = SubResource("CapsuleShape3D_vorr1")
+
+[node name="Asshead2" parent="." instance=ExtResource("3_6kr36")]

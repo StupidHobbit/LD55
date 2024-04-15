@@ -43,7 +43,7 @@ You: Okay, let's try this!
 You: Coniuro te, spiritus tenebris, adveni nefarium!
 You: Ph'nglui mglw'nafh Yog-Sothoth, Shub-Niggurath!
 
-if State.has_item('blade') and State.has_item('solar_amulet') and State.has_item('ktulhu_amulet'):
+if State.has_item('star_grass') and State.has_item('solar_amulet') and State.has_item('ktulhu_amulet'):
 	do State.start_ritual('hastur_ritual')
 else:
 	do wait(1)
@@ -51,3 +51,27 @@ else:
 	You: Well, I guess something is missing.
 	
 => END
+
+~ ossadagowah_start
+
+if not State.has_item('ossadagowah_spell'):
+	You: I don't know what to do with that!
+else:
+	You: Looks like this is the same pentagram from the note I just read.
+	- Try to read the spell => ossadagowah_spell
+	- Do nothing => END 
+
+=> END
+
+~ ossadagowah_spell
+
+You: Okay, let's try this!
+You: Ossadagowah, veni ad me nunc!
+You: In nomine tenebrarum, exsurgat aeternum!
+
+if State.has_item('devils_grass') and State.has_item('poison_apple'):
+	do State.start_ritual('ossadagowah_ritual')
+else:
+	do wait(1)
+	And... Nothing happens.
+	You: Well, I guess something is missing.

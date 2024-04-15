@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dpw43iuf0u6bc"
+path="res://.godot/imported/Paimon.dialogue-440cce1b84fe4a12aaaa62f3d9554cd7.tres"
+
+[deps]
+
+source_file="res://dialogues/Paimon.dialogue"
+dest_files=["res://.godot/imported/Paimon.dialogue-440cce1b84fe4a12aaaa62f3d9554cd7.tres"]
+
+[params]
+
+defaults=true

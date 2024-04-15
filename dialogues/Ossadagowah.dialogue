@@ -1,0 +1,22 @@
+~ start
+
+Ossadagowah: ...
+You: Hello creature.
+Ossadagowah: ...
+You: I need your help.
+Ossadagowah: ...
+You: Why aren't you saying anything?
+Ossadagowah: ...
+You: Can you hear me, demon?
+Ossadagowah: ...
+You: Hmm, I see.
+if State.has_item('blade')
+	- You: I need your blood, I'm sorry creature => stab_ossadagowah
+	- Do nothing
+else:
+	You need something to stab him.
+	
+=> END
+~ stab_ossadagowah
+You stab the poor creature, and the [color=DARK_RED][u]demon blood[/u][/color] pours out of him.
+=> END

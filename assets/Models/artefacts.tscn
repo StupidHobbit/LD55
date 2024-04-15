@@ -13,6 +13,9 @@ visible = false
 [node name="DevilsGrass" parent="." index="2"]
 visible = false
 
+[node name="CatEyeAmu" parent="." index="3"]
+visible = false
+
 [node name="CrestAmu" parent="." index="4"]
 visible = false
 
