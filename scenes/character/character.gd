@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 class_name Character
 
-@export var SPEED = 6.0
+@export var SPEED = 4.0
 @export var RUNNING_SPEED = 10.0
 @export var SPEED_DAMPING = 4.0
 @export var CROUCHING_SPEED = 4.0
@@ -30,11 +30,16 @@ var movement_disabled: bool = false
 var has_crouching_boost: bool = false
 var has_dash_boost: bool = false
 var handle_input: bool = true
+var is_falling: bool = false
 var examinated_item: Examinable
 
 @onready var camera = $Camera3D
 @onready var holder = $Camera3D/Holder
 @onready var anim_component = $character_animation
+@onready var walk_audio_stream_player = $WalkAudioStreamPlayer
+@onready var jump_audio_player = $JumpAudioPlayer
+@onready var fall_audio_player = $FallAudioPlayer
+
 
 func _ready():
 	viewport_size = get_viewport().size / 2
@@ -80,11 +85,15 @@ func apply_vertical_movement(delta: float):
 	var jump_pressed = Input.is_action_pressed("jump")
 	var is_on_floor = is_on_floor()
 	if is_on_floor:
+		if is_falling:
+			fall_audio_player.play()
+		is_falling = false
 		time_from_last_on_floor = 0
 		climbing_time = 0
 	time_from_last_on_floor += delta
 	
 	if not is_on_floor:
+		is_falling = true
 		if is_climbing(jump_pressed):
 			velocity.y = climbing_speed
 			climbing_time += delta
@@ -94,6 +103,7 @@ func apply_vertical_movement(delta: float):
 
 	if time_from_last_jump_press < jump_buffer and time_from_last_on_floor < coyote_time:
 		velocity.y = JUMP_VELOCITY
+		jump_audio_player.play()
 
 func apply_rotation():
 	var rotation = turn * PI / viewport_size
@@ -114,8 +124,15 @@ func apply_crouching(delta: float):
 func apply_horizontal_movement(delta: float):
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
 	var speed = get_current_speed()
+
+	walk_audio_stream_player.pitch_scale = 1.2 + 0.8 * speed / RUNNING_SPEED
+	if direction and is_on_floor():
+		if not walk_audio_stream_player.playing:
+			walk_audio_stream_player.play()
+	elif walk_audio_stream_player.playing:
+		walk_audio_stream_player.stop()
+	
 	if direction:
 		var actual_horizontal_speed = _get_actual_horizontal_speed()
 		if actual_horizontal_speed > speed:
