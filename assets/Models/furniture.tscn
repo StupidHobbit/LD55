@@ -13,9 +13,6 @@ visible = false
 [node name="Table" parent="." index="2"]
 visible = false
 
-[node name="BookKeeper" parent="." index="3"]
-visible = false
-
 [node name="Cauldrons" parent="." index="4"]
 visible = false
 
@@ -29,6 +26,15 @@ visible = false
 visible = false
 
 [node name="Book_1" parent="." index="8"]
+visible = false
+
+[node name="Scroll_2" parent="." index="9"]
+visible = false
+
+[node name="Scroll_3" parent="." index="10"]
+visible = false
+
+[node name="Scroll_1" parent="." index="11"]
 visible = false
 
 [node name="FlaskTable" parent="." index="12"]
@@ -67,13 +73,46 @@ visible = false
 [node name="Crystalball" parent="." index="23"]
 visible = false
 
+[node name="BaseSmall" parent="." index="24"]
+visible = false
+
 [node name="Cards" parent="." index="25"]
 visible = false
 
 [node name="CandlesTable" parent="." index="26"]
 visible = false
 
+[node name="Candle" parent="." index="32"]
+visible = false
+
+[node name="Spoon" parent="." index="34"]
+visible = false
+
+[node name="Bag_1" parent="." index="35"]
+visible = false
+
+[node name="Scales" parent="." index="42"]
+visible = false
+
+[node name="Scroll_4" parent="." index="43"]
+visible = false
+
+[node name="Scroll_10" parent="." index="44"]
+visible = false
+
+[node name="Scroll_5" parent="." index="45"]
+visible = false
+
+[node name="Scroll_8" parent="." index="46"]
+visible = false
+
+[node name="Scroll_11" parent="." index="47"]
+visible = false
+
 [node name="Bag_2" parent="." index="48"]
+visible = false
+
+[node name="Scroll_open_2" parent="." index="49"]
 visible = false
 
 [node name="Book_4" parent="." index="50"]
@@ -100,6 +139,24 @@ visible = false
 [node name="Scroll_9" parent="." index="57"]
 visible = false
 
+[node name="Scroll_12" parent="." index="58"]
+visible = false
+
+[node name="Scroll_6" parent="." index="59"]
+visible = false
+
+[node name="Scroll_7" parent="." index="60"]
+visible = false
+
+[node name="Scroll_13" parent="." index="61"]
+visible = false
+
+[node name="Scroll_open_3" parent="." index="62"]
+visible = false
+
+[node name="Scroll_open_4" parent="." index="63"]
+visible = false
+
 [node name="Stick" parent="." index="64"]
 visible = false
 
@@ -107,6 +164,9 @@ visible = false
 visible = false
 
 [node name="WitchHat" parent="." index="66"]
+visible = false
+
+[node name="Blanket" parent="." index="67"]
 visible = false
 
 [node name="Chest" parent="." index="68"]
