@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cep21k8x6efvs"]
+[gd_scene load_steps=7 format=3 uid="uid://cep21k8x6efvs"]
 
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_omo4u"]
+[ext_resource type="AudioStream" uid="uid://bf48cr41nchjk" path="res://assets/sounds/Pages.wav" id="2_fakgm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ao57f"]
 resource_name = "Parchment4"
@@ -47,6 +48,7 @@ size = Vector3(0.45, 0.545, 0.23)
 
 [node name="OpenedScroll" type="Node3D"]
 script = ExtResource("1_omo4u")
+audio = ExtResource("2_fakgm")
 
 [node name="Scroll_open_3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000495297, 0, 2.15679e-05)

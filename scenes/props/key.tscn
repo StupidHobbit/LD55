@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://x3dg8pm00qcu"]
+[gd_scene load_steps=11 format=3 uid="uid://x3dg8pm00qcu"]
 
 [ext_resource type="Script" path="res://scenes/props/key.gd" id="1_87uun"]
 [ext_resource type="Texture2D" uid="uid://ynmlru7g15qr" path="res://assets/Models/Artefacts_Demons_SP_Art_BaseColor.png" id="2_65d6p"]
+[ext_resource type="AudioStream" uid="uid://qqrcdqnek2ke" path="res://assets/sounds/KeyPickUp.wav" id="2_h22pq"]
 [ext_resource type="Texture2D" uid="uid://c0u8eu8n6monn" path="res://assets/Models/Artefacts_Demons_SP_Art_Emissive.png" id="3_eqvrb"]
 [ext_resource type="Texture2D" uid="uid://dfvyuysl6lcne" path="res://assets/Models/Artefacts_Demons_SP_Art_OcclusionRoughnessMetallic.png" id="4_fxyix"]
 [ext_resource type="Texture2D" uid="uid://dw4vly8iv28is" path="res://assets/Models/Artefacts_Demons_SP_Art_Normal.png" id="5_leeyf"]
@@ -58,6 +59,7 @@ shadow_mesh = SubResource("ArrayMesh_fgv5m")
 
 [node name="Key" type="Node3D"]
 script = ExtResource("1_87uun")
+audio = ExtResource("2_h22pq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00492692, 0.00140285, -0.000792205)
