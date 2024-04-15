@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1euyerkru4m6"]
+[gd_scene load_steps=7 format=3 uid="uid://c8pkrlfgbjfnq"]
 
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_uhdyn"]
 [ext_resource type="Resource" uid="uid://bam1rryyiuqpb" path="res://dialogues/beholder.dialogue" id="2_u2kmf"]
