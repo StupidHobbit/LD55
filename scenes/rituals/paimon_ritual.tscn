@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8yqoordm1pc7"]
+
+[ext_resource type="PackedScene" uid="uid://dmp4c73elove4" path="res://scenes/rituals/ritual.tscn" id="1_h3sh8"]
+[ext_resource type="PackedScene" uid="uid://kuts3plna6bh" path="res://scenes/creatures/paimon.tscn" id="2_xacxb"]
+[ext_resource type="Resource" uid="uid://owwdd8if52mv" path="res://dialogues/rituals.dialogue" id="3_egwij"]
+
+[node name="PaimonRitual" instance=ExtResource("1_h3sh8")]
+slug = "paimon_ritual"
+demon_scene = ExtResource("2_xacxb")
+title = "Try to summon"
+dialogue = ExtResource("3_egwij")
+dialogue_title = "hastur_start"
+prefix = ""
