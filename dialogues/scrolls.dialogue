@@ -38,6 +38,15 @@ Note: Hastur
 
 => END
 
+~ hastur_description
+
+Note: Hastur is one of the ancient ones, a mythical creature that brings death to some and madness to others.
+Note: Little is known about him, but his bright, unblinking eyes, visible from the darkness of his hood and the seemingly weightless body hidden behind his cloak, to doubt who it is when you see him.
+Note: In order to summon him, you need a [color=blue][u]blade[/u][/color], to donate your blood to his sign, a [color=green][u]ktulhu amulet[/u][/color] while wearing a [color=YELLOW][u]solar amulet[/u][/color] which surrounds the wearer with an aura of sunshine and grants him protection from the all-devouring darkness emanating from Hastur .
+if not State.has_item('hastur_spell'):
+	Now you know a spell for summoning a Beholder!
+	do State.add_item('hastur_spell')
+	
 ~ under_construction
 
 Note: Under construction
