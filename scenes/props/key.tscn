@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dw4vly8iv28is" path="res://assets/Models/Artefacts_Demons_SP_Art_Normal.png" id="5_leeyf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0uhxk"]
-size = Vector3(0.245, 0.123281, 0.335)
+size = Vector3(0.275, 0.168, 0.375)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0nnn"]
 resource_name = "Art"

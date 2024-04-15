@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6231ywfrne30"]
+[gd_scene load_steps=8 format=3 uid="uid://b6231ywfrne30"]
 
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_sec8g"]
+[ext_resource type="AudioStream" uid="uid://bf48cr41nchjk" path="res://assets/sounds/Pages.wav" id="2_aq54k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ao57f"]
 resource_name = "Parchment4"
@@ -77,6 +78,7 @@ size = Vector3(0.44, 0.18, 0.185)
 
 [node name="RedScroll" type="Node3D"]
 script = ExtResource("1_sec8g")
+audio = ExtResource("2_aq54k")
 
 [node name="Scroll_1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000495297, 0, 2.15679e-05)

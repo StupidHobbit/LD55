@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmwsocuecsnq8"]
+[gd_scene load_steps=8 format=3 uid="uid://dmwsocuecsnq8"]
 
 [ext_resource type="Script" path="res://scenes/interactables/dialogable.gd" id="1_7pait"]
+[ext_resource type="AudioStream" uid="uid://bf48cr41nchjk" path="res://assets/sounds/Pages.wav" id="2_mhajj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pg2ke"]
 size = Vector3(0.525, 0.195, 0.185)
@@ -77,6 +78,7 @@ shadow_mesh = SubResource("ArrayMesh_qby1t")
 
 [node name="green_scroll" type="Node3D"]
 script = ExtResource("1_7pait")
+audio = ExtResource("2_mhajj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000495297, 0, 2.15679e-05)
