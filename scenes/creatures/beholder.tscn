@@ -15,10 +15,6 @@ title = "Beholder"
 dialogue = ExtResource("2_xjy8e")
 dialogue_title = "start"
 
-[node name="Eye" parent="." instance=ExtResource("1_2ptdc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, 0)
-script = ExtResource("4_1sbl6")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 collision_layer = 9
@@ -29,3 +25,7 @@ shape = SubResource("CapsuleShape3D_vorr1")
 
 [node name="ForceField" parent="." instance=ExtResource("5_xs0ad")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0178015, 1.49, -0.204581)
+
+[node name="Eye2" parent="." instance=ExtResource("1_2ptdc")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 1.5, 0)
+script = ExtResource("4_1sbl6")
