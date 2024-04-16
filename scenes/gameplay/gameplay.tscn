@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://4fyoq8npekf0"]
+[gd_scene load_steps=5 format=3 uid="uid://4fyoq8npekf0"]
 
 [ext_resource type="PackedScene" uid="uid://barl4q1kugrmm" path="res://scenes/gameplay/pause-layer/pause-layer.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cemuqj35c8x5l" path="res://scenes/levels/castle3.tscn" id="3_dihxe"]
+[ext_resource type="AudioStream" uid="uid://ckv40m68sdy2e" path="res://assets/music/Calm.ogg" id="4_y244i"]
 [ext_resource type="Script" path="res://scenes/gameplay/gameplay.gd" id="5"]
 
 [node name="Gameplay" type="Node"]
@@ -10,3 +11,9 @@ script = ExtResource("5")
 [node name="PauseLayer" parent="." instance=ExtResource("2")]
 
 [node name="Castle" parent="." instance=ExtResource("3_dihxe")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_y244i")
+volume_db = -25.774
+autoplay = true
+bus = &"BGM"

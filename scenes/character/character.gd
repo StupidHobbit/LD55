@@ -31,6 +31,8 @@ var has_crouching_boost: bool = false
 var has_dash_boost: bool = false
 var handle_input: bool = true
 var is_falling: bool = false
+var had_fall: bool = false
+
 var examinated_item: Examinable
 
 @onready var camera = $Camera3D
@@ -85,8 +87,9 @@ func apply_vertical_movement(delta: float):
 	var jump_pressed = Input.is_action_pressed("jump")
 	var is_on_floor = is_on_floor()
 	if is_on_floor:
-		if is_falling:
+		if is_falling and had_fall:
 			fall_audio_player.play()
+		had_fall = true
 		is_falling = false
 		time_from_last_on_floor = 0
 		climbing_time = 0

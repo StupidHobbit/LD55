@@ -19,3 +19,13 @@ func start_ritual(name: String):
 
 func finish_ritual(name: String):
 	rituals[name].finish()
+
+func end_game():
+	_end_game.call_deferred()
+
+func _end_game():
+	await get_tree().create_timer(1).timeout
+	Utils.start_dialogue(preload("res://dialogues/end.dialogue"), 'start')
+
+func go_to_menu():
+	Game.change_scene_to_file("res://scenes/menu/menu.tscn", {"show_progress_bar": false})

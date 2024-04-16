@@ -1,0 +1,7 @@
+~ start
+
+Creator: This is the end of the game for now.
+Creator: Thank you for playing our game!
+do State.go_to_menu()
+
+=> END

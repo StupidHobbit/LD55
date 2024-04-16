@@ -31,5 +31,6 @@ Paimon: Take your pick young man.
 - You: I will forever put you in these chains, demon spawn, and you will suffer forever in this room for all you have done to my master.
 - You: I, I think I'm willing to sacrifice my soul, just please give me back my mentor
 Paimon: Well, the choice is yours.
+do State.end_game()
 
 => END
